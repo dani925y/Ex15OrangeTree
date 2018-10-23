@@ -10,20 +10,15 @@ namespace Ex15OrangeTree
     {
         private int age;
         private int height;
-
-
         public OrangeTree(int age, int height)
         {
             this.age = age;
             this.height = height;
         }
-
-
         public int Age
         {
             get;
             private set;
-
         }
         public int Height
         {
@@ -39,7 +34,7 @@ namespace Ex15OrangeTree
         public bool TreeAlive
         {
             get;
-            set;
+             private set;
         }
         public int NumOranges
         {
@@ -55,20 +50,17 @@ namespace Ex15OrangeTree
         public void OneYearPasses()
         {
             Age++;
+            OrangesEaten = 0;
 
             if (Age < 80)
             {
                 Height += 2;
             }
 
-            OrangesEaten = 0;
-            
-
             if (Age > 1 && Age <= 80)
             {
                 NumOranges += 5;
             }
-
 
             if (Age > 80)
             {
@@ -77,8 +69,6 @@ namespace Ex15OrangeTree
             }
 
         }
-
-
         public void EatOrange(int v)
         {
             OrangesEaten += v;
